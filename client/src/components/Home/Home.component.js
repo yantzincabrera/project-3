@@ -1,10 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import "./Home.css";
-
-//import { Alert } from 'reactstrap';
-
-
+import {Feed} from '../Feed/feed.js';
 class Home extends React.Component {
     constructor (props) {
         super(props);
@@ -38,6 +35,7 @@ class Home extends React.Component {
             </div>
                 <input class="btn btn-primary" type="submit" value="Post"></input>
              </div>
+             <Feed/>
             </div>
         );
     }
