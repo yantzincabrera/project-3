@@ -4,6 +4,7 @@ export const NavBar = props => {
         return (
             <div>
                 <ul className="nav justify-content-end">
+                
                     <li className="nav-item">
                         <a className="nav-link active" href="#">Home</a>
                     </li>
