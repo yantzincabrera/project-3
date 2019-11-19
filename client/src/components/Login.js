@@ -22,6 +22,7 @@ export const Login = props => {
                     <label className="form-check-label" >Keep Me!</label>
                 </div>
                     <button type="submit" className="Btn" >Submit</button>
+                    <button type="signup" className="Btn2" >Sign-Up!</button>
             </form>
             </div>
        </div>
