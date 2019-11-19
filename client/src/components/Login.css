@@ -1,22 +1,49 @@
 .Body {
-    background-color: #6bbaa7;
+   
    
 }
 .Login-Header {
-    background-color: #B6A19E;
-    font-size: 2.20rem;
+    font-size: 3.50rem;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    color: black;
+    padding: 20px;
+    
 }
 
 .Container {
-    max-width: 300px;
+    max-width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+    
 }
 
 .Btn {
-    background-color: #FBA100;
-    border-radius: 4px;
-    padding: 10px 24px;
+    background-color: black;
+    border-radius: 12px;
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Salsa', cursive;
+    border: 2px solid black;
+}
+
+
+a{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    padding: 20px;
+    float: left;
+    font-size: 50px
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
 }
