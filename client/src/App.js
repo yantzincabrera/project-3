@@ -5,7 +5,7 @@ import Home from './components/Home/Home.component';
 import {NoMatch} from './components/NoMatch/NoMatch.components';
 import {NavBar} from './components/NavBar/navbar.js';
 import {Login} from './components/Login.js';
-import {CrtLogin} from './components/CrtLogin/CrtLogin.js';
+import { Signup } from './components/Sign-Up/signup';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/crtlogin" component={CrtLogin} />
+        <Route path="/signup" component={Signup} />
         <Route component={NoMatch} />
       </Switch>
       
