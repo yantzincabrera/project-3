@@ -6,6 +6,7 @@ export const NoMatch = props => {
     <Jumbotron>
       <h1>404 - Resource Not Found</h1>
       <span>Seat's Taken!</span>
+      <a href="/home">Home</a>
     </Jumbotron>
   );
 };
