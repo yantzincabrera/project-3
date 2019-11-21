@@ -4,5 +4,11 @@
     font-family: 'Salsa', cursive;
     color: black;
 
-    
+}
+
+.Container{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font: 18px Arial, sans-serif;
 }
