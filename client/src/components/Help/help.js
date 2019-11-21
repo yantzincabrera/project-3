@@ -1,6 +1,7 @@
 import React from 'react';
 import './help.css';
 
+
 export const Help = props => {
     return (
 <div>
@@ -39,6 +40,7 @@ export const Help = props => {
         <a href="https://grief.com/about-grief/" className="card-link">Go to Grief.com</a>
   </div>
 </div>
+
         </div>
     );
 }
