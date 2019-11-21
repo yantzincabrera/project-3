@@ -8,7 +8,6 @@ export const NavBar = props => {
                     <a class="navbar-brand" href="#">Remember Me</a>
                    
                 <ul className="nav justify-content-end">
-                    
                     <li className="nav-item">
                         <a className="Nav-Link" href="#">Home</a>
                     </li>
