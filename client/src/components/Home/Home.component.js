@@ -2,7 +2,8 @@ import React from 'react';
 import {Redirect} from 'react-router-dom';
 import "./Home.css";
 //import {Feed} from '../Feed/feed.js';
-import UserPost from '../UserPost/UserPost.js';
+import EssayForm from '../UserPost/UserPost.js';
+
 
 class Home extends React.Component {
     constructor (props) {
@@ -37,7 +38,10 @@ return (
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
-        <UserPost />
+        <EssayForm />
+        <div>
+            
+        </div>
     </div>
     );
   }
