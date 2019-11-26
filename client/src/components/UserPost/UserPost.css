@@ -1,0 +1,23 @@
+form {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+textarea {
+    text-align: center;
+    width: 300px;
+}
+.submitButton {
+    text-align: center;
+
+}
+.uploadButton {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+}
+.newPost {
+    background-color: white;
+    padding: 30px;
+}

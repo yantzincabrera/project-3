@@ -1,36 +1,50 @@
 import React from 'react';
-//import "./UserPost.css";
+import "./UserPost.css";
 
-class UserPost extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        value: 'Insert text here.'
-      };
-      
+
+class EssayForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'What would you like to express?',
+
+    };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  }
 
-handleChange(event) {
-  this.setState({value: event.target.value});
-}
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
 
-handleSubmit(event) {
-  alert('This is a post: ' + this.state.value);
-  event.preventDefault();
-}
-  
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      showPost: true,
+    });
+    console.log(this.state.value);
+  }
+
+  clearForm = () => {
+    this.state.reset();
+  }
+
   render() {
     return (
+//first and last name
+   
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Post:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" vslue="Submit" />
+          <textarea class="form-control" id="validationTextarea" value={this.state.value} onChange={this.handleChange}></textarea>
+        
+        <div className="uploadButton"><input type="file" name="imgUpload"/></div>  
+        <div  className="submitButton"><button variant="contained" color="primary" className="submitButton" type="button" value="Submit" onClick={this.handleSubmit}>Post
+          </button></div> 
+          {this.state.showPost && <div className="newPost">{this.state.value}</div>}
       </form>
+     
     );
   }
+
 }
-export default UserPost;
+export default EssayForm;
