@@ -34,7 +34,9 @@ return (
         <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Remember Me</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="lead"> <h2>Losing a loved one is never easy, but remebering them is vital to keeping their legacy alive.</h2>
+    
+    "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." ~ Pericles</p>
   </div>
 </div>
         <UserPost />
