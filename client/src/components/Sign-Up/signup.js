@@ -3,7 +3,7 @@ import './signup.css'
 
 export const Signup = props => {
     return (
-        <div>
+        <div className="Background">
         <header className="Signup-Header">Create an Account</header>
          <div className="Container">
          <form>
@@ -16,9 +16,6 @@ export const Signup = props => {
                <label >Last Name</label>
                <input type="last" className="form-control" id="exampleInputLast" aria-describedby="lastHelp"></input>
            </div>
-
-
-
 
            <div className="form-group">
                <label >Email</label>

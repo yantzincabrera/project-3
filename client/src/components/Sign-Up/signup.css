@@ -12,3 +12,13 @@
     color: #fff;
     font: 18px Arial, sans-serif;
 }
+
+.Background {
+    background: url("https://img.freepik.com/free-photo/beautiful-dusk-light-colorful-beauty_1203-5706.jpg?size=626&ext=jpg")
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
