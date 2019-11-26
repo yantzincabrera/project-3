@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MediaCard from '../Cards/Cards.js'
 
 export const Feed = props => {
@@ -6,6 +7,8 @@ export const Feed = props => {
         <div>
             <div> 
                     <MediaCard/>
+
+
             </div>
 
         </div>
