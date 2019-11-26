@@ -1,8 +1,10 @@
-.Card {
+.card {
     max-width: 350px;
     float: left;
     padding: 20px;
     text-align: center;
     position: sticky;
-    background-color: bisque;
+    background-color: black;
+    font-size: 15px;
 }
+

@@ -1,9 +1,4 @@
-body {
- background: url("https://cdn.pixabay.com/photo/2017/06/09/04/41/sunrise-2385711_960_720.jpg")no-repeat center center fixed;
-    background-size: cover;
-}
-
-code {
+.code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

@@ -3,17 +3,19 @@ import './App.css';
 import { BrowserRouter as Router , Switch, Route} from 'react-router-dom';
 import Home from './components/Home/Home.component';
 import {NoMatch} from './components/NoMatch/NoMatch.components';
-import {NavBar} from './components/NavBar/navbar.js';
-import {Login} from './components/Login';
-import { Signup } from './components/Sign-Up/signup';
-import { Help } from "./components/Help/help";
-import { Memorial} from './components/Memorial/Memorial';
+
+import Navbar from './components/NavBar/Navbar.js';
+import {Login} from './components/Login.js';
+import {Signup} from './components/Sign-Up/signup';
+import {Help} from "./components/Help/help";
+
+
 
 
 function App() {
   return (
     <Router>
-      <NavBar /> 
+      <Navbar /> 
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
