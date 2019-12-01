@@ -1,13 +1,17 @@
 import React from 'react';
 import "./UserPost.css";
+//import datePassed from '../DatePassed/datePassed.js';
+
+
 
 
 class EssayForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'What would you like to express?',
-
+      textBio: '',
+      firstName: '',
+      lastName: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,7 +19,10 @@ class EssayForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ 
+      [event.target.name]: event.target.value
+   });
+    
   }
 
   handleSubmit = (event) => {
@@ -23,7 +30,8 @@ class EssayForm extends React.Component {
     this.setState({
       showPost: true,
     });
-    console.log(this.state.value);
+    console.log(this.state);
+   
   }
 
   clearForm = () => {
@@ -32,15 +40,53 @@ class EssayForm extends React.Component {
 
   render() {
     return (
-//first and last name
-   
-      <form onSubmit={this.handleSubmit}>
-          <textarea class="form-control" id="validationTextarea" value={this.state.value} onChange={this.handleChange}></textarea>
-        
-        <div className="uploadButton"><input type="file" name="imgUpload"/></div>  
-        <div  className="submitButton"><button variant="contained" color="primary" className="submitButton" type="button" value="Submit" onClick={this.handleSubmit}>Post
-          </button></div> 
-          {this.state.showPost && <div className="newPost">{this.state.value}</div>}
+    <form onSubmit={this.handleSubmit}> <label>Give us infromation about your loved one</label>
+      <div className="datePassed"></div>
+      <div className="form-row"> What was their name?
+      <div className="col">
+          <input 
+          type="text"
+          name="firstName" 
+          className="form-control" 
+          placeholder="First name" 
+          value={this.state.value}
+          onChange={this.handleChange}/>
+      </div>
+      <div className="col"> 
+          <input 
+          type="text"
+          name="lastName" 
+          className="form-control" 
+          placeholder="Last name" 
+          value={this.state.value}
+          onChange={this.handleChange}/>
+      </div>
+      </div>Tell us about them, like your favorite memory.
+          <textarea 
+          className="form-control" 
+          id="validationTextarea" 
+          name='textBio' 
+          value={this.state.value} 
+          onChange={this.handleChange}>
+          </textarea> 
+      <div className="submitButton">
+          <button 
+          variant="contained" 
+          className="btn btn-primary"  
+          type="button" 
+          value="Submit" 
+          onClick={this.handleSubmit}>Post</button>
+      </div> 
+      <div className="tributeLabel"> Tributes
+            {this.state.showPost && 
+            <div className="lovedoneName">
+              {this.state.firstName} {this.state.lastName}
+            <div>
+              {this.state.textBio}
+              </div>
+              </div> }
+            
+      </div>
       </form>
      
     );
