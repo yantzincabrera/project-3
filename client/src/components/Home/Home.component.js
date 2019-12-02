@@ -30,18 +30,19 @@ class Home extends React.Component {
         if(!this.state.toLogin) {
             return <Redirect to='/login'/>
         }
+        
 return (
     <div>
         <div className="jumbotron jumbotron-fluid">
   <div className="container">
    
-    <p className="lead"> <h2>Losing a loved one is never easy, but remebering them is vital to keeping their legacy alive.</h2>
+    <p className="lead"> <h2>Losing a loved one is never easy, but remembering them is vital to keeping their legacy alive.</h2>
     
     "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." ~ Pericles</p>
   </div>
 </div>
         <EssayForm />
-        <div>
+ <div>
             
         </div>
     </div>
