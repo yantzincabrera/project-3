@@ -9,5 +9,18 @@
 h2 {
     font-family: 'La Belle Aurore', cursive;
     color: peachpuff;
+    text-align: center;
 }
 
+.container-h {
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h3 {
+    color: white;
+    font-size: 10px; 
+}
