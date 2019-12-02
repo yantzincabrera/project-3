@@ -2,42 +2,37 @@ import React from 'react';
 import "./UserPost.css";
 //import datePassed from '../DatePassed/datePassed.js';
 
-
-
-
 class EssayForm extends React.Component {
   constructor(props) {
     super(props);
+    this.curriculum = React.createRef()
     this.state = {
       textBio: '',
       firstName: '',
-      lastName: ''
+      lastName: '',
+      imageUp: []
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   handleChange(event) {
     this.setState({ 
-      [event.target.name]: event.target.value
-   });
-    
+      [event.target.name]: event.target.value,
+      file: event.target.files
+      
+   }); 
   }
-
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
       showPost: true,
     });
     console.log(this.state);
-   
   }
-
   clearForm = () => {
     this.state.reset();
   }
-
   render() {
     return (
     <form onSubmit={this.handleSubmit}> <label>Give us infromation about your loved one</label>
@@ -61,6 +56,13 @@ class EssayForm extends React.Component {
           value={this.state.value}
           onChange={this.handleChange}/>
       </div>
+      <div>
+        <input
+        name='imageUp' 
+        type='file' 
+        value={this.state.value}
+        onChange={this.handleChange}/>
+      </div>
       </div>Tell us about them, like your favorite memory.
           <textarea 
           className="form-control" 
@@ -77,17 +79,17 @@ class EssayForm extends React.Component {
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
       </div> 
-      <div className="tributeLabel"> Tributes
-            {this.state.showPost && 
-            <div className="lovedoneName">
-              {this.state.firstName} {this.state.lastName}
-            <div>
-              {this.state.textBio}
-              </div>
-              </div> }
-            
-      </div>
-      </form>
+      <div className="tributeLabel"> Tributes </div>
+      {this.state.showPost && 
+      <div className="card" >
+        <img src={this.state.imageUp} />
+      <div className="card-body">
+          <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
+          <p className="card-text"> {this.state.textBio}</p>
+          <a href="#" className="card-link">Card link</a>
+    </div>
+    </div>} 
+    </form>
      
     );
   }
