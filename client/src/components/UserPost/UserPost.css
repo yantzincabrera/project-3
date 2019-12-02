@@ -1,13 +1,13 @@
 form {
     margin: auto;
-    width: 50%;
-    border: 3px solid black;
+    width: 90%;
+    border: 2px solid black;
     padding: 10px;
     margin-bottom: 30px;
 }
 textarea {
-    text-align: center;
-    width: 300px;
+    height: 200px;
+    width: 200px;
 }
 .submitButton {
     text-align: center;
@@ -30,4 +30,21 @@ textarea {
     background-color: white;
     margin-top: 50px;
     margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'La Belle Aurore', cursive;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 30px;
+    font-weight: bolder;
+  
+    
+}
+
+.form-row {
+    font-weight: bolder;
+    font-size: 20px;
+
+
 }
