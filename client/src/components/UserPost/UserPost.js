@@ -62,11 +62,11 @@ class EssayForm extends React.Component {
           onChange={this.handleChange}/>
       </div>
       <div>
-       {/* <input
+        <input
         name='imageUp' 
         type='file' 
         value={this.state.value}
-       onChange={this.handleChange}/>*/}
+       onChange={this.handleChange}/>
       </div>
       <div className>
           <textarea 

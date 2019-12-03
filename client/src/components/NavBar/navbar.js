@@ -15,7 +15,9 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 //import { NavigationSubdirectoryArrowLeft } from 'material-ui/svg-icons';
 //import { black } from 'material-ui/styles/colors';
 import HelpIcon from '@material-ui/icons/Help';
-//import {Help} from "./components/Help/help";
+import {Help} from "../../components/Help/help";
+import {Link} from "react-router-dom";
+import SvgIcon from '@material-ui/core/SvgIcon';
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
@@ -139,8 +141,8 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <HelpIcon  />
+          <Badge color="secondary">
+            <Link to='/help'><HelpIcon /></Link>
           </Badge>
         </IconButton>
       </MenuItem>
@@ -196,7 +198,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge color="secondary">
-                <HelpIcon  />
+              <Link to='/help'><HelpIcon /></Link>
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
