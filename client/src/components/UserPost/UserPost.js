@@ -93,12 +93,12 @@ class EssayForm extends React.Component {
       {this.state.showPost && 
       <div className="card" >
         <img src={this.state.imageUp} />
-      <div className="card-body">
+      <div className="card-link">
           <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
           <p className="card-text"> {this.state.textBio}</p>
-          <a href="#" className="card-link">Card link</a>
+
     </div>
-    </div>} 
+    </div>}
     </form>
     
      

@@ -14,5 +14,7 @@ export const Memorial = props => {
             <div className="memorialUserComments">UserComments</div>
             </div>
         </div>
+
+  
     );
 }
