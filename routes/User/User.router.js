@@ -1,6 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const cors= require('cors')
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt-nodejs')
 const controller = require('../../controllers/User/User.controller');
+
+router.use(cors())
+
+process.env.SECRET_KEY = 'secret'
 
 // MIDDLEWARE - Router Specific
 router.use(function timeLog (req, res, next) {
@@ -10,7 +17,7 @@ router.use(function timeLog (req, res, next) {
 
 // ROUTES
 router.get('/User', controller.getAll);
-router.get('/User/:id', controller.getById);
+router.post('/User/', controller.getById);
 router.post('/UserPost', controller.create);
 router.put('/User/:id', controller.updateById);
 router.delete('/User/:id', controller.deleteById);

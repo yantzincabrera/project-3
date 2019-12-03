@@ -1,29 +1,31 @@
 var createError = require('http-errors');
 var express = require('express');
-//handle authentication
-var passport = require('passport')
-var session = require('express-session')
 var bodyParser = require('body-parser')
+var cors = require('cors')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-//var env = require('dotenv').load();
+var env = require('dotenv').config();
 var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 var userRoutes = require('./routes/User/User.router.js');
 
 var db = require("./models");
 
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200,
+}
+
 var app = express();
 //bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// For Passport
- app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
-app.use(passport.initialize());
- 
-app.use(passport.session()); // persistent login sessions
+app.use(cors(corsOptions))
+const upload = require('./upload')
+app.post('/upload', upload)
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -38,7 +40,7 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+app.use(cors())
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

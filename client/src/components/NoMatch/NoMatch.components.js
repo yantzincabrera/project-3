@@ -1,8 +1,13 @@
 import React from 'react';
+import { Jumbotron} from 'reactstrap';
 
 export const NoMatch = props => {
   return(
-<h1>hello</h1>
+    <Jumbotron>
+      <h1>404 - Resource Not Found</h1>
+      <span>Seat's Taken!</span>
+      <a href="/home">Home</a>
+    </Jumbotron>
   );
 };
     
