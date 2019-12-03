@@ -1,5 +1,6 @@
 import React from 'react';
 import "./UserPost.css";
+
 //import datePassed from '../DatePassed/datePassed.js';
 
 class EssayForm extends React.Component {
@@ -33,11 +34,15 @@ class EssayForm extends React.Component {
   clearForm = () => {
     this.state.reset();
   }
+
+  
+
   render() {
     return (
-    <form onSubmit={this.handleSubmit}> <label>Give us infromation about your loved one</label>
+    <form onSubmit={this.handleSubmit} >
+    <label>Who is your loved one?</label>
       <div className="datePassed"></div>
-      <div className="form-row"> What was their name?
+      <div className="form-row">What was his/her name?</div>
       <div className="col">
           <input 
           type="text"
@@ -62,15 +67,17 @@ class EssayForm extends React.Component {
         type='file' 
         value={this.state.value}
         onChange={this.handleChange}/>
-      </div>
       </div>Tell us about them, like your favorite memory.
+      <div className>
           <textarea 
           className="form-control" 
           id="validationTextarea" 
+          placeholder="Tell us about them, like your favorite memory?"
           name='textBio' 
           value={this.state.value} 
           onChange={this.handleChange}>
           </textarea> 
+      </div>
       <div className="submitButton">
           <button 
           variant="contained" 
@@ -93,6 +100,5 @@ class EssayForm extends React.Component {
      
     );
   }
-
 }
 export default EssayForm;
