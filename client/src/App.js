@@ -8,6 +8,7 @@ import Navbar from './components/NavBar/navbar.js';
 import {Login} from './components/Login.js';
 import {Signup} from './components/Sign-Up/signup';
 import {Help} from "./components/Help/help";
+import { Memorial } from './components/Memorial/Memorial';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
+        <Route path="/memorial" component={Memorial} />
         
         <Route path="/signup" component={Signup} /> 
         <Route path="/help" component={Help} />
