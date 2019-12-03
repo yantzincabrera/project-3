@@ -70,3 +70,10 @@ Login-label{
     color: #fff;
     font: 18px Arial, sans-serif;
 }
+
+
+.h3, h3 {
+    font-size: 19px;
+    text-align: center;
+    font-family: 'La Belle Aurore', cursive;
+}

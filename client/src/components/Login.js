@@ -6,6 +6,7 @@ import './Login.css'
 export const Login = props => {
     return (
        <div className="Body">
+            <h3>"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." ~Pericles</h3>
            <header className="Login-Header">Log-in</header>
                 <div className="Container">
                     <form>

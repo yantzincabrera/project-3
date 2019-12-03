@@ -1,26 +1,20 @@
 .Jumbotron {
-    max-width: 950px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 35px;
+    background-color: white;
 }
 
 h2 {
     font-family: 'La Belle Aurore', cursive;
-    color: peachpuff;
+    color: lightsalmon;
     text-align: center;
+    font-weight: bolder;
+
 }
 
 .container-h {
-    background-color: black;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
+
 }
 
-h3 {
-    color: white;
-    font-size: 10px; 
-}

@@ -38,12 +38,13 @@ class EssayForm extends React.Component {
   
 
   render() {
-    return (
-    <form onSubmit={this.handleSubmit} >
-    <label>Who is your loved one?</label>
+    return ( 
+    <form className="feedForm" onSubmit={this.handleSubmit} >
+    <label className="FormHeading">Who is your loved one?</label>
       <div className="datePassed"></div>
       <div className="form-row">What was his/her name?</div>
-      <div className="col">
+      <div className="row">
+        <div className="col">
           <input 
           type="text"
           name="firstName" 
@@ -51,8 +52,8 @@ class EssayForm extends React.Component {
           placeholder="First name" 
           value={this.state.value}
           onChange={this.handleChange}/>
-      </div>
-      <div className="col"> 
+          </div>
+        <div className="col">
           <input 
           type="text"
           name="lastName" 
@@ -60,7 +61,9 @@ class EssayForm extends React.Component {
           placeholder="Last name" 
           value={this.state.value}
           onChange={this.handleChange}/>
-      </div>
+          </div>
+        </div>
+      
       <div>
        {/* <input
         name='imageUp' 
@@ -68,7 +71,7 @@ class EssayForm extends React.Component {
         value={this.state.value}
        onChange={this.handleChange}/>*/}
       </div>
-      <div className>
+      <div className="TextBio">
           <textarea 
           className="form-control" 
           id="validationTextarea" 
@@ -97,6 +100,7 @@ class EssayForm extends React.Component {
     </div>
     </div>} 
     </form>
+    
      
     );
   }
