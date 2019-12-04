@@ -2,3 +2,15 @@
     min-height: 64px;
     background-color: black;
 }
+
+a {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    /* padding: 20px; */
+    float: left;
+    font-size: 50px;
+}
+
+path {
+    color: orange;
+}
