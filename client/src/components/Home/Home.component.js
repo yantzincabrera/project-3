@@ -33,12 +33,10 @@ class Home extends React.Component {
         
 return (
     <div>
-        <div className="jumbotron jumbotron-fluid">
+        <div className="Jumbotron">
   <div className="container-h">
    
     <p className="lead"> <h2>Losing a loved one is never easy, but remembering them is vital to keeping their legacy alive.</h2>
-    
-    <h3>"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." ~Pericles</h3>
     </p>
   </div>
 </div>

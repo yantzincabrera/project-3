@@ -10,14 +10,14 @@ import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 //import { NavigationSubdirectoryArrowLeft } from 'material-ui/svg-icons';
 //import { black } from 'material-ui/styles/colors';
 import HelpIcon from '@material-ui/icons/Help';
 import {Help} from "../../components/Help/help";
 import {Link} from "react-router-dom";
-import SvgIcon from '@material-ui/core/SvgIcon';
+import HomeIcon from '@material-ui/icons/Home';
+
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
@@ -124,7 +124,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+     
     </Menu>
   );
 
@@ -160,7 +160,8 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+        <Link to="/"><HomeIcon color="primary" /></Link>
+        <Link to="/login"><ExitToAppIcon /></Link>
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -213,7 +214,8 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+             <Link to="/"><HomeIcon color="primary" /></Link>
+             <Link to="/login"><ExitToAppIcon /></Link>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -224,7 +226,6 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
             </IconButton>
           </div>
         </Toolbar>

@@ -1,16 +1,15 @@
-form {
+.feedForm {
     margin: auto;
-
-    width: 90%;
+    width: 80%;
     border: 2px solid black;
-
     padding: 10px;
     margin-bottom: 30px;
 }
-textarea {
-    height: 200px;
-    width: 200px;
+
+.TextBio {
+    margin-top: 30px;
 }
+
 .submitButton {
     text-align: center;
     float: right;
@@ -18,35 +17,40 @@ textarea {
     margin-bottom: 15px;
 
 }
+
 .uploadButton {
     text-align: center;
     padding: 30px;
     background-color: white;
 }
+
 .newPost {
     background-color: white;
     padding: 30px;
 }
+
 .tributeLabel {
     text-align: center;
     background-color: white;
     margin-top: 50px;
     margin-bottom: 30px;
     font-weight: bold;
-    font-family: 'La Belle Aurore', cursive;
+    font-family: 'Salsa', cursive;
+    font-size: 30px;
 }
-label {
-    display: inline-block;
+
+.FormHeading {
     margin-bottom: .5rem;
     font-size: 30px;
     font-weight: bolder;
-  
-    
+    text-align: center;
+    padding-left: 250px;
+    font-family: 'Salsa', cursive;
 }
 
 .form-row {
     font-weight: bolder;
     font-size: 20px;
-
-
 }
+
+ 
