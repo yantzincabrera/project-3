@@ -85,7 +85,7 @@ class EssayForm extends React.Component {
       <div className="submitButton">
           <button 
           variant="contained" 
-          className="btn btn-primary"  
+          className="btn btn-warning"  
           type="button" 
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
