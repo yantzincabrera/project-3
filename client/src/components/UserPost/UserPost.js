@@ -1,8 +1,6 @@
 import React from 'react';
 import "./UserPost.css";
 
-//import datePassed from '../DatePassed/datePassed.js';
-
 class EssayForm extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +9,6 @@ class EssayForm extends React.Component {
       textBio: '',
       firstName: '',
       lastName: '',
-      
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -32,9 +29,7 @@ class EssayForm extends React.Component {
   clearForm = () => {
     this.state.reset();
   }
-
-  
-
+ 
   render() {
     return ( 
       <div className="FormBackground">
@@ -44,6 +39,7 @@ class EssayForm extends React.Component {
       <div className="form-row">What was his/her name?</div>
       <div className="row">
         <div className="col">
+       
           <input 
           type="text"
           name="firstName" 
@@ -64,11 +60,7 @@ class EssayForm extends React.Component {
         </div>
       
       <div>
-        <input
-        name='imageUp' 
-        type='file' 
-        value={this.state.value}
-       onChange={this.handleChange}/>
+
       </div>
       <div className="TextBio">
           <textarea 
@@ -88,6 +80,7 @@ class EssayForm extends React.Component {
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
       </div> 
+    
       <div className="tributeLabel"> Tributes </div>
       {this.state.showPost && 
       <div className="card" >
@@ -105,4 +98,5 @@ class EssayForm extends React.Component {
     );
   }
 }
+ 
 export default EssayForm;

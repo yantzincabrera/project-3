@@ -3,6 +3,7 @@ import {Redirect} from 'react-router-dom';
 import "./Home.css";
 //import {Feed} from '../Feed/feed.js';
 import EssayForm from '../UserPost/UserPost.js';
+//import SomeForm from "../SomeForm/SomeForm";
 
 
 class Home extends React.Component {
@@ -41,6 +42,8 @@ return (
   </div>
 </div>
         <EssayForm />
+       
+        
  <div>
             
         </div>

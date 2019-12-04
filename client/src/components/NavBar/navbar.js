@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -142,7 +142,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge color="secondary">
-            <Link to='/help'><HelpIcon /></Link>
+           
           </Badge>
         </IconButton>
       </MenuItem>
@@ -199,7 +199,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge color="secondary">
-              <Link to='/help'><HelpIcon /></Link>
+              
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
@@ -216,6 +216,7 @@ export default function PrimarySearchAppBar() {
             >
              <Link to="/"><HomeIcon color="primary" /></Link>
              <Link to="/login"><ExitToAppIcon /></Link>
+             <Link to='/help'><HelpIcon /></Link>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -235,9 +236,3 @@ export default function PrimarySearchAppBar() {
     </div>
   );
 }
-
-
-        
-
-
-
