@@ -40,6 +40,7 @@ class EssayForm extends React.Component {
 
   render() {
     return ( 
+      <div className="FormBackground">
     <form className="feedForm" onSubmit={this.handleSubmit} >
     <label className="FormHeading">Who is your loved one?</label>
       <div className="datePassed"></div>
@@ -85,7 +86,7 @@ class EssayForm extends React.Component {
       <div className="submitButton">
           <button 
           variant="contained" 
-          className="btn btn-primary"  
+          className="btn btn-warning"  
           type="button" 
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
@@ -101,6 +102,7 @@ class EssayForm extends React.Component {
     </div>
     </div>}
     </form>
+    </div>
     
      
     );

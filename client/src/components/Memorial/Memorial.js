@@ -11,7 +11,7 @@ import {
 
   
     return (
-      <div className="Wallpaper">
+      <div>
         <Card>
           <CardImg top width="100%" src="https://media.gq.com/photos/5ab92aa2828c097e1c21d599/3:4/w_539,h_719,c_limit/coco.jpg"alt="Card image cap" />
           <CardBody>
