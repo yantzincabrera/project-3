@@ -11,7 +11,7 @@ class EssayForm extends React.Component {
       textBio: '',
       firstName: '',
       lastName: '',
-      selectedFile: null
+      
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,9 +20,6 @@ class EssayForm extends React.Component {
   handleChange(event) {
     this.setState({ 
       [event.target.name]: event.target.value,
-      selectedFile: event.target.files[0],
-      loaded: 0,
-      
    }); 
   }
   handleSubmit = (event) => {
