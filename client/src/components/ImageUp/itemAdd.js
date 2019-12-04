@@ -1,75 +1,37 @@
-import React from 'react';
+I don't get why you do var upload_file = this.state.value; if you're setting var upload_file = this.state.value; but you never assign value in the state object (in the example below).
 
-export default class ItemAdd extends React.Component {
+I think you are using the value property of the input['file'] instead of the files one. You have to take the selected file using the files property and use the FormData interface to map the form parameters.
 
-    constructor() {
-        super();
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {
-            image: null,
-            imagePreviewUrl: null
-        }
-    }
+class SomeForm extends Component {
 
-    handleSubmit(e) {
-        e.preventDefault();
-        let form = document.forms.itemAdd;
-        this.props.createItem({
-            name: form.name.value,
-            image: this.state.image
-        });
-        // Clear the form and state for the next input.
-        form.name.value = "";
-        this.state.image = null;
-        this.state.imagePreviewUrl = null;
-    }
+    handleSubmit(e){
+        if (e.target.input.files.length) {
+            const upload_file = e.target.input.files[0];
+            const formData = new FormData();
+            formData.append('file', upload_file);
 
-    handleImageChange(e) {
-        e.preventDefault();
-
-        let reader = new FileReader();
-        let file = e.target.files[0];
-
-        reader.onloadend = () => {
-            this.setState({
-                image: file,
-                imagePreviewUrl: reader.result
-            });
-        }
-
-        reader.readAsDataURL(file)
-    }
-
-    render() {
-        let { imagePreviewUrl } = this.state;
-        let $imagePreview = null;
-        if (imagePreviewUrl) {
-            $imagePreview = (<img src={imagePreviewUrl} className={'img-preview'} />);
+            const request = axios.post(this.props.cfg_url+'/upload', formData)
+                .then(function(response){
+                    console.log('successfully uploaded', upload_file);
+                });
         } else {
-            $imagePreview = (<div className="previewText">Please select an image.</div>);
+            console.log('You need to select a file');
         }
-        return (
-            <div>
-                <form name="itemAdd" onSubmit={this.handleSubmit}>
-                    <table>
-                        <tr>
-                            <td><label for="name">Name:</label></td>
-                            <td><input type="text" name="name" id="name" placeholder="Name" /></td>
-                        </tr>
-                        <tr>
-                            <td><input type="file" onChange={(e) => this.handleImageChange(e)} /></td>
-                            <td>
-                                <div className="img-preview">
-                                    {$imagePreview}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><button>Add</button></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
+    }
+
+    render(){
+        return(
+            <Form inline onSubmit={this.handleSubmit}>
+                <FormGroup controlId='uploadFormId'>
+                    <ControlLabel>Upload File:</ControlLabel>
+                    <FormControl
+                        type='file'
+                        name="input-file"
+                        label='File'
+                    />
+                </FormGroup>
+                <Button type='submit'>Upload</Button>
+            </Form>
         );
     }
 }
