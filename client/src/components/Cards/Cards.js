@@ -44,10 +44,10 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-            <a href="https://www.betterhelp.com"><Button size="small" color="primary">
+            <a href="https://www.betterhelp.com"><Button type="button" class="btn btn-outline-warning">
             Link
-            </Button></a>
-            <a href="https://www.helpguide.org/articles/grief/helping-someone-who-is-grieving.htm"><Button size="small" color="primary">
+            </Button> </a>
+            <a href="https://www.helpguide.org/articles/grief/helping-someone-who-is-grieving.htm"><Button type="button" class="btn btn-outline-warning">
             Learn More
             </Button></a>
         </CardActions>
@@ -73,10 +73,10 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-        <a href="https://www.gofundme.com"><Button size="small" color="primary">
+        <a href="https://www.gofundme.com"><Button type="button" class="btn btn-outline-warning">
             Link
             </Button></a>
-            <a href="https://www.cafonline.org/my-personal-giving/long-term-giving/resource-centre/five-reasons-to-give-to-charity"> <Button size="small" color="primary">
+            <a href="https://www.cafonline.org/my-personal-giving/long-term-giving/resource-centre/five-reasons-to-give-to-charity"> <Button type="button" class="btn btn-outline-warning">
             Learn More
             </Button></a>
         </CardActions>
@@ -100,10 +100,10 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-        <a href="https://suicidepreventionlifeline.org"> <Button size="small" color="primary">
+        <a href="https://suicidepreventionlifeline.org"> <Button type="button" class="btn btn-outline-warning">
             Link
             </Button></a>
-            <a href="https://www.mentalhealthfirstaid.org/2018/12/how-to-help-someone-who-is-suicidal/"> <Button size="small" color="primary">
+            <a href="https://www.mentalhealthfirstaid.org/2018/12/how-to-help-someone-who-is-suicidal/"> <Button type="button" class="btn btn-outline-warning">
             Learn More
             </Button></a>
         </CardActions>
@@ -127,7 +127,7 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-           <a href="https://www.themuse.com/advice/50-personal-finance-tips-that-will-change-the-way-you-think-about-money"> <Button size="small" color="primary">
+           <a href="https://www.themuse.com/advice/50-personal-finance-tips-that-will-change-the-way-you-think-about-money"> <Button type="button" class="btn btn-outline-warning">
             Learn More
             </Button></a>
         </CardActions>
