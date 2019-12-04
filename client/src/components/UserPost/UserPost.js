@@ -48,6 +48,7 @@ class EssayForm extends React.Component {
       <div className="row">
         <div className="col">
           <input 
+        
           type="text"
           name="firstName" 
           className="form-control" 
@@ -67,6 +68,7 @@ class EssayForm extends React.Component {
         </div>
       
       <div>
+      <i class="large material-icons">add_a_photo</i>
         <input
         name='imageUp' 
         type='file' 
