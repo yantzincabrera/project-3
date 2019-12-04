@@ -3,7 +3,7 @@
 import './NavBar.css'
 
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -146,7 +146,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge color="secondary">
-            <Link to='/help'><HelpIcon /></Link>
+           
           </Badge>
         </IconButton>
       </MenuItem>
@@ -270,7 +270,7 @@ class Landing extends Component {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge color="secondary">
-              <Link to='/help'><HelpIcon /></Link>
+              
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
@@ -287,6 +287,7 @@ class Landing extends Component {
             >
              <Link to="/"><HomeIcon color="primary" /></Link>
              <Link to="/login"><ExitToAppIcon /></Link>
+             <Link to='/help'><HelpIcon /></Link>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -300,17 +301,19 @@ class Landing extends Component {
             </IconButton>
 
           </div>
+
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+    </div>
+  );
+}
+
         </nav>
       )
     }
   }
   
   export default withRouter(Landing)
-
-
-
-
-        
-
-
-
+\

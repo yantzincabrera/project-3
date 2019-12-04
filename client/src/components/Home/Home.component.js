@@ -7,6 +7,7 @@ import React, { Component } from 'react'
 //import jwt_decode from 'jwt-decode'
 
 
+
 class Home extends React.Component {
     constructor (props) {
         super(props);
@@ -51,6 +52,8 @@ return (
   </div>
 </div>
         <EssayForm />
+       
+        
  <div>
             
         </div>

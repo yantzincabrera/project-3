@@ -3,16 +3,14 @@ import "./UserPost.css";
 import { addToBlog } from "../Blog.functions";
 
 
-
 class EssayForm extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       firstName: '',
-
       lastName: '', 
       post_bio: '',
-      
 
     };
 
@@ -29,9 +27,6 @@ class EssayForm extends Component {
   handleChange(event) {
     this.setState({ 
       [event.target.name]: event.target.value,
-      selectedFile: event.target.files[0],
-      loaded: 0,
-      
    }); 
   }
   handleSubmit = (event) => {
@@ -45,7 +40,6 @@ class EssayForm extends Component {
     this.state.reset();
   }
 
-
     const newPost = {
         name: this.state.name,
         lastname: this.state.lastname,
@@ -54,8 +48,6 @@ class EssayForm extends Component {
       }
       addToBlog(newPost).then(res => console.log("success"))
 }
-  
-
 
   render() {
     return ( 
@@ -67,6 +59,7 @@ class EssayForm extends Component {
       <div className="form-row">What was his/her name?</div>
       <div className="row">
         <div className="col">
+       
           <input 
         
           type="text"
@@ -88,13 +81,13 @@ class EssayForm extends Component {
         </div>
       
       <div>
+
       <i class="large material-icons">add_a_photo</i>
         <input
         name='imageUp' 
         type='file' 
         value={this.state.value}
        onChange={this.handleChange}/>
-
       </div>
       <div className="TextBio">
           <textarea 
@@ -114,6 +107,7 @@ class EssayForm extends Component {
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
       </div> 
+    
       <div className="tributeLabel"> Tributes </div>
       {this.state.showPost && 
       <div className="card" >
@@ -132,5 +126,5 @@ class EssayForm extends Component {
     )
   }
 }
-  
-  export default EssayForm;
+export default EssayForm;
+
