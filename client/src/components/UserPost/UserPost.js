@@ -9,19 +9,42 @@ class EssayForm extends Component {
     super(props);
     this.state = {
       firstName: '',
+
       lastName: '', 
       post_bio: '',
       
+
     };
 
     this.handleChange = this.handleChange.bind(this); 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleChange(e) {
       this.setState({[e.target.name]: e.target.value})
       }
   handleSubmit = (e) => {
     e.preventDefault()
+
+  handleChange(event) {
+    this.setState({ 
+      [event.target.name]: event.target.value,
+      selectedFile: event.target.files[0],
+      loaded: 0,
+      
+   }); 
+  }
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      showPost: true,
+    });
+    console.log(this.state);
+  }
+  clearForm = () => {
+    this.state.reset();
+  }
+
 
     const newPost = {
         name: this.state.name,
@@ -34,9 +57,10 @@ class EssayForm extends Component {
   
 
 
+  render() {
+    return ( 
+      <div className="FormBackground">
 
-render(){
-  return ( 
     <form className="feedForm" onSubmit={this.handleSubmit} >
     <label className="FormHeading">Who is your loved one?</label>
       <div className="datePassed"></div>
@@ -44,6 +68,7 @@ render(){
       <div className="row">
         <div className="col">
           <input 
+        
           type="text"
           name="firstName" 
           className="form-control" 
@@ -63,11 +88,13 @@ render(){
         </div>
       
       <div>
-       {/* <input
+      <i class="large material-icons">add_a_photo</i>
+        <input
         name='imageUp' 
         type='file' 
         value={this.state.value}
-      onChange={this.handleChange}/>*/}
+       onChange={this.handleChange}/>
+
       </div>
       <div className="TextBio">
           <textarea 
@@ -82,7 +109,7 @@ render(){
       <div className="submitButton">
           <button 
           variant="contained" 
-          className="btn btn-primary"  
+          className="btn btn-warning"  
           type="button" 
           value="Submit" 
           onClick={this.handleSubmit}>Post</button>
@@ -90,15 +117,16 @@ render(){
       <div className="tributeLabel"> Tributes </div>
       {this.state.showPost && 
       <div className="card" >
-     
-        <img src={this.state.imageUp} />
-      <div className="card-body">
+
+        <img src={this.state.imageUp} alt="UploadedImage"/>
+      <div className="card-link">
           <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
-          <p className="card-text"> {this.state.post_bio}</p>
-          <a href="#" className="card-link">Card link</a>
+          <p className="card-text"> {this.state.textBio}</p>
+
     </div>
-    </div>} 
+    </div>}
     </form>
+    </div>
     
     
     )

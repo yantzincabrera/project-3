@@ -51,6 +51,29 @@
 .form-row {
     font-weight: bolder;
     font-size: 20px;
+    font-family: 'Salsa', cursive;
 }
 
- 
+.card-link {
+    font-family: 'Salsa', cursive;
+    font-size: 20px;
+}
+
+input {
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}

@@ -33,21 +33,21 @@ class Home extends React.Component {
        // console.log("login user");
    // }
 
-   // render() {
-     //   {console.log(this.state)}
-       // if(!this.state.toLogin) {
-         //   return <Redirect to='/login'/>
-        //}
-        render(){
 
-            return (
-                <div>
-        <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Remember Me</h1>
-    <p class="lead"> <h2>Losing a loved one is never easy, but remebering them is vital to keeping their legacy alive.</h2>
-    
-    "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." ~ Pericles</p>
+    render() {
+        {console.log(this.state)}
+        if(!this.state.toLogin) {
+            return <Redirect to='/login'/>
+        }
+        
+return (
+    <div className="HomeBackground">
+        <div className="Jumbotron">
+  <div className="container-h">
+   
+    <p className="lead"> <h2>Losing a loved one is never easy, but remembering them is vital to keeping their legacy alive.</h2>
+    </p>
+
   </div>
 </div>
         <EssayForm />

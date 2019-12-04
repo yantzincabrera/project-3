@@ -44,12 +44,12 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button size="small" color="primary">
+            <a href="https://www.betterhelp.com"><Button type="button" class="btn btn-outline-warning">
             Link
-            </Button>
-            <Button size="small" color="primary">
+            </Button> </a>
+            <a href="https://www.helpguide.org/articles/grief/helping-someone-who-is-grieving.htm"><Button type="button" class="btn btn-outline-warning">
             Learn More
-            </Button>
+            </Button></a>
         </CardActions>
 
         </Card>
@@ -73,12 +73,12 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button size="small" color="primary">
+        <a href="https://www.gofundme.com"><Button type="button" class="btn btn-outline-warning">
             Link
-            </Button>
-            <Button size="small" color="primary">
+            </Button></a>
+            <a href="https://www.cafonline.org/my-personal-giving/long-term-giving/resource-centre/five-reasons-to-give-to-charity"> <Button type="button" class="btn btn-outline-warning">
             Learn More
-            </Button>
+            </Button></a>
         </CardActions>
         </Card>
     </Grid>
@@ -100,12 +100,12 @@ export default function MediaCard() {
             </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button size="small" color="primary">
+        <a href="https://suicidepreventionlifeline.org"> <Button type="button" class="btn btn-outline-warning">
             Link
-            </Button>
-            <Button size="small" color="primary">
+            </Button></a>
+            <a href="https://www.mentalhealthfirstaid.org/2018/12/how-to-help-someone-who-is-suicidal/"> <Button type="button" class="btn btn-outline-warning">
             Learn More
-            </Button>
+            </Button></a>
         </CardActions>
         </Card>
     </Grid>
@@ -122,17 +122,14 @@ export default function MediaCard() {
             Seeking Financial Help?
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-            Videos to make sense of it all.
+            Make sense of it all.
             </Typography>
             </CardContent>
         </CardActionArea>
         <CardActions>
-            <Button size="small" color="primary">
-            Link
-            </Button>
-            <Button size="small" color="primary">
+           <a href="https://www.themuse.com/advice/50-personal-finance-tips-that-will-change-the-way-you-think-about-money"> <Button type="button" class="btn btn-outline-warning">
             Learn More
-            </Button>
+            </Button></a>
         </CardActions>
         </Card>
     </Grid>
