@@ -7,7 +7,7 @@ import Navbar from './components/NavBar/navbar.js';
 import {Login} from './components/Login.js';
 import {Signup} from './components/Sign-Up/signup';
 import {Help} from "./components/Help/help";
-import { Memorial } from './components/Memorial/Memorial';
+import  Memorial  from './components/Memorial/Memorial';
 
 
 

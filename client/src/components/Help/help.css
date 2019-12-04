@@ -8,3 +8,12 @@
     font-size: 15px;
 }
 
+.Cover {
+    background: url("https://st2.depositphotos.com/2719395/9370/i/950/depositphotos_93709346-stock-photo-marigold-flower-background.jpg")
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}

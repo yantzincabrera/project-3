@@ -32,7 +32,7 @@ class Home extends React.Component {
         }
         
 return (
-    <div>
+    <div  className="Cover">
         <div className="Jumbotron">
   <div className="container-h">
    
