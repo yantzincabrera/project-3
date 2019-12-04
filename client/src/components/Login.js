@@ -29,10 +29,10 @@ onSubmit(e){
     }
     login(user).then(res => {
         if(res){
-            this.props.history.push(`/Memorial`)
+            this.props.history.push(`/Home.component`)
         }
     })
-}
+} 
 
 render(){
     return (

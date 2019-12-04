@@ -1,6 +1,9 @@
 {
   "name": "project-3",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.16.2"
+  },
   "private": true,
   "scripts": {
     "start": "npm run start:prod",

@@ -11,7 +11,7 @@ constructor(){
         name: '',
         lastname:'',
         email:'',
-        password: ''
+        password: '' 
     }
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
@@ -19,7 +19,7 @@ constructor(){
     onChange(e){
         this.setState({[e.target.name]: e.target.value})
     }
-    onSubmit(e){
+    onSubmit(e){ 
         e.preventDefault()
 
         const newUser = {

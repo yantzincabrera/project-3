@@ -1,23 +1,56 @@
-form {
+.feedForm {
     margin: auto;
-    width: 50%;
-    border: 3px solid black;
+    width: 80%;
+    border: 2px solid black;
     padding: 10px;
+    margin-bottom: 30px;
 }
-textarea {
-    text-align: center;
-    width: 300px;
+
+.TextBio {
+    margin-top: 30px;
 }
+
 .submitButton {
     text-align: center;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 15px;
 
 }
+
 .uploadButton {
     text-align: center;
     padding: 30px;
     background-color: white;
 }
+
 .newPost {
     background-color: white;
     padding: 30px;
 }
+
+.tributeLabel {
+    text-align: center;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Salsa', cursive;
+    font-size: 30px;
+}
+
+.FormHeading {
+    margin-bottom: .5rem;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-left: 250px;
+    font-family: 'Salsa', cursive;
+}
+
+.form-row {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+ 

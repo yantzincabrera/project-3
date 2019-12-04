@@ -1,51 +1,108 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./UserPost.css";
+import { addToBlog } from "../Blog.functions";
 
 
-class EssayForm extends React.Component {
+
+class EssayForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'What would you like to express?',
-
+      firstName: '',
+      lastName: '', 
+      post_bio: '',
+      
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this); 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  handleChange(e) {
+      this.setState({[e.target.name]: e.target.value})
+      }
+  handleSubmit = (e) => {
+    e.preventDefault()
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      showPost: true,
-    });
-    console.log(this.state.value);
-  }
-
-  clearForm = () => {
-    this.state.reset();
-  }
-
-  render() {
-    return (
-//first and last name
-   
-      <form onSubmit={this.handleSubmit}>
-          <textarea class="form-control" id="validationTextarea" value={this.state.value} onChange={this.handleChange}></textarea>
+    const newPost = {
+        name: this.state.name,
+        lastname: this.state.lastname,
+        post_bio: this.state.post_bio
         
-        <div className="uploadButton"><input type="file" name="imgUpload"/></div>  
-        <div  className="submitButton"><button variant="contained" color="primary" className="submitButton" type="button" value="Submit" onClick={this.handleSubmit}>Post
-          </button></div> 
-
-          {this.state.showPost && <div className="newPost">{this.state.value}</div>}
-      </form>
-
-    );
-  }
-
+      }
+      addToBlog(newPost).then(res => console.log("success"))
 }
-export default EssayForm;
+  
+
+
+
+render(){
+  return ( 
+    <form className="feedForm" onSubmit={this.handleSubmit} >
+    <label className="FormHeading">Who is your loved one?</label>
+      <div className="datePassed"></div>
+      <div className="form-row">What was his/her name?</div>
+      <div className="row">
+        <div className="col">
+          <input 
+          type="text"
+          name="firstName" 
+          className="form-control" 
+          placeholder="First name" 
+          defaultValue=""
+          onChange={this.handleChange}/>
+          </div>
+        <div className="col">
+          <input 
+          type="text"
+          name="lastName" 
+          className="form-control" 
+          placeholder="Last name" 
+          defaultValue=""
+          onChange={this.handleChange}/>
+          </div>
+        </div>
+      
+      <div>
+       {/* <input
+        name='imageUp' 
+        type='file' 
+        value={this.state.value}
+      onChange={this.handleChange}/>*/}
+      </div>
+      <div className="TextBio">
+          <textarea 
+          className="form-control" 
+          id="validationTextarea" 
+          placeholder="Tell us about them, like your favorite memory?"
+          name='textBio' 
+          defaultValue=""
+          onChange={this.handleChange}>
+          </textarea> 
+      </div>
+      <div className="submitButton">
+          <button 
+          variant="contained" 
+          className="btn btn-primary"  
+          type="button" 
+          value="Submit" 
+          onClick={this.handleSubmit}>Post</button>
+      </div> 
+      <div className="tributeLabel"> Tributes </div>
+      {this.state.showPost && 
+      <div className="card" >
+     
+        <img src={this.state.imageUp} />
+      <div className="card-body">
+          <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
+          <p className="card-text"> {this.state.post_bio}</p>
+          <a href="#" className="card-link">Card link</a>
+    </div>
+    </div>} 
+    </form>
+    
+    
+    )
+  }
+}
+  
+  export default EssayForm;

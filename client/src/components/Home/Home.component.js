@@ -1,10 +1,10 @@
-import React from 'react';
+//import React from 'react';
 import {Redirect} from 'react-router-dom';
 import "./Home.css";
 //import {Feed} from '../Feed/feed.js';
 import EssayForm from '../UserPost/UserPost.js';
 import React, { Component } from 'react'
-import jwt_decode from 'jwt-decode'
+//import jwt_decode from 'jwt-decode'
 
 
 class Home extends React.Component {
@@ -14,18 +14,18 @@ class Home extends React.Component {
             name:'',
             lastname:'',
             email:'',
-            error: {}
+            error: {} 
         }
     }
-    componentWillMount(){
-        const token = localStorage.usertoken
-        const decoded = jwt_decode(token)
-        this.setState({
-        name: decoded.name,
-        lastname: decoded.lastname,
-        email: decoded.email
-        })
-  }
+   // componentWillMount(){
+     //   const token = localStorage.usertoken
+       // const decoded = jwt_decode(token)
+       // this.setState({
+       // name: decoded.name,
+        //lastname: decoded.lastname,
+        //email: decoded.email
+       // })
+  //}
     
     //handelLoginUser = user => {
       //  debugger
@@ -51,7 +51,7 @@ class Home extends React.Component {
   </div>
 </div>
         <EssayForm />
-        <div>
+ <div>
             
         </div>
     </div>

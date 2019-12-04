@@ -8,19 +8,22 @@ import Login from './components/Login';
 import  Register  from './components/Sign-Up/signup.js';
 import { Help } from "./components/Help/help";
 import { Memorial} from './components/Memorial/Memorial';
-
+import EssayForm from './components/UserPost/UserPost'
+//import  Landing  from './components/NavBar/navbar';
 
 function App() {
   return (
     <Router>
-      <NavBar /> 
+      
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/Memorial" component={Memorial} />
         <Route path="/signup" component={Register} /> 
+        <Route path="/UserPost" component={EssayForm} />
         <Route path="/help" component={Help} />
         <Route component={NoMatch} />
+
       </Switch>
       
     </Router>

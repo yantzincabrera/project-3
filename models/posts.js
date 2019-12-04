@@ -1,7 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
-    var Post = sequelize.define("Post", {
+    var Blogs = sequelize.define("Blogs", {
       
-      post: {
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true
+      },
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -14,9 +19,9 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.STRING,
           allowNull: false
           }
-        },
+      
       
     });
-    return Post;
+    return Blogs;
   };
   

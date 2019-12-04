@@ -12,9 +12,9 @@ export const register = newUser => {
     .then(promise => {
         console.log(promise);
     })
-}
+} 
 
-export const login = user => {
+export const login = user => { 
     return axios
     .post('api/User/', {
         email: user.email,

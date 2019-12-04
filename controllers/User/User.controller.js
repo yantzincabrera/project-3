@@ -1,19 +1,44 @@
 const db = require('../../models');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
+
+process.env.SECRET_KEY = 'secret'
+
 const create = (req, res) => {
    // TODO - Implement User.create
-   
-      db.Users.create({
-       name: req.body.name,
-       lastname: req.body.lastname,
-       email: req.body.email,
-       password: req.body.password 
-      })
-      .then(user => res.json(user))
-      .catch(err => res.status(400).send(error));
-    
-    };
+   const userData = {
+    name: req.body.name,
+    lastname: req.body.lastname,
+    email: req.body.email,
+    password: req.body.password 
+  }
+
+  db.findOne({
+    where: {
+      email: req.body.email
+    }
+  })
+    //TODO bcrypt
+    .then(user => {
+      if (!user) {
+        bcrypt.hash(req.body.password, 10, (err, hash) => {
+          userData.password = hash
+          db.Users.create(userData)
+            .then(user => {
+              res.json({ status: user.email + 'Registered!' })
+            })
+            .catch(err => {
+              res.send('error: ' + err)
+            })
+        })
+      } else {
+        res.json({ error: 'User already exists' })
+      }
+    })
+    .catch(err => {
+      res.send('error: ' + err)
+    })
+}
 
 
 

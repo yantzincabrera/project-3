@@ -12,19 +12,13 @@ var userRoutes = require('./routes/User/User.router.js');
 
 var db = require("./models");
 
-var corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200,
-}
 
-var app = express();
+var app = express(); 
 //bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(cors(corsOptions))
-const upload = require('./upload')
-app.post('/upload', upload)
+
 
 app.use(logger('dev'));
 app.use(express.json());
