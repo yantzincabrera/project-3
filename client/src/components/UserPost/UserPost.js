@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./UserPost.css";
+import { addToBlog } from "../Blog.functions";
 
-//import datePassed from '../DatePassed/datePassed.js';
 
-class EssayForm extends React.Component {
+
+class EssayForm extends Component {
   constructor(props) {
     super(props);
-    this.curriculum = React.createRef()
     this.state = {
-      textBio: '',
       firstName: '',
-      lastName: '',
-      selectedFile: null
+
+      lastName: '', 
+      post_bio: '',
+      
+
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this); 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleChange(e) {
+      this.setState({[e.target.name]: e.target.value})
+      }
+  handleSubmit = (e) => {
+    e.preventDefault()
+
   handleChange(event) {
     this.setState({ 
       [event.target.name]: event.target.value,
@@ -36,11 +45,22 @@ class EssayForm extends React.Component {
     this.state.reset();
   }
 
+
+    const newPost = {
+        name: this.state.name,
+        lastname: this.state.lastname,
+        post_bio: this.state.post_bio
+        
+      }
+      addToBlog(newPost).then(res => console.log("success"))
+}
   
+
 
   render() {
     return ( 
       <div className="FormBackground">
+
     <form className="feedForm" onSubmit={this.handleSubmit} >
     <label className="FormHeading">Who is your loved one?</label>
       <div className="datePassed"></div>
@@ -53,7 +73,7 @@ class EssayForm extends React.Component {
           name="firstName" 
           className="form-control" 
           placeholder="First name" 
-          value={this.state.value}
+          defaultValue=""
           onChange={this.handleChange}/>
           </div>
         <div className="col">
@@ -62,7 +82,7 @@ class EssayForm extends React.Component {
           name="lastName" 
           className="form-control" 
           placeholder="Last name" 
-          value={this.state.value}
+          defaultValue=""
           onChange={this.handleChange}/>
           </div>
         </div>
@@ -74,6 +94,7 @@ class EssayForm extends React.Component {
         type='file' 
         value={this.state.value}
        onChange={this.handleChange}/>
+
       </div>
       <div className="TextBio">
           <textarea 
@@ -81,7 +102,7 @@ class EssayForm extends React.Component {
           id="validationTextarea" 
           placeholder="Tell us about them, like your favorite memory?"
           name='textBio' 
-          value={this.state.value} 
+          defaultValue=""
           onChange={this.handleChange}>
           </textarea> 
       </div>
@@ -96,6 +117,7 @@ class EssayForm extends React.Component {
       <div className="tributeLabel"> Tributes </div>
       {this.state.showPost && 
       <div className="card" >
+
         <img src={this.state.imageUp} alt="UploadedImage"/>
       <div className="card-link">
           <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
@@ -106,8 +128,9 @@ class EssayForm extends React.Component {
     </form>
     </div>
     
-     
-    );
+    
+    )
   }
 }
-export default EssayForm;
+  
+  export default EssayForm;
