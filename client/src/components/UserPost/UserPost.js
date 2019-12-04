@@ -11,7 +11,7 @@ class EssayForm extends React.Component {
       textBio: '',
       firstName: '',
       lastName: '',
-      imageUp: []
+      selectedFile: null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,7 +20,8 @@ class EssayForm extends React.Component {
   handleChange(event) {
     this.setState({ 
       [event.target.name]: event.target.value,
-      file: event.target.files
+      selectedFile: event.target.files[0],
+      loaded: 0,
       
    }); 
   }
@@ -92,7 +93,7 @@ class EssayForm extends React.Component {
       <div className="tributeLabel"> Tributes </div>
       {this.state.showPost && 
       <div className="card" >
-        <img src={this.state.imageUp} />
+        <img src={this.state.imageUp} alt="UploadedImage"/>
       <div className="card-link">
           <h5 className="card-title"> {this.state.firstName} {this.state.lastName}</h5>
           <p className="card-text"> {this.state.textBio}</p>
