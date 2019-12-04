@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
       fontFamily: 'Kristi', 
       color: 'orange',
-      fontSize: '40px',
+      fontSize: '50px',
      
     },
   },
