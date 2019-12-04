@@ -1,13 +1,6 @@
-.Wallpaper {
-    background-color: #d1c4e9;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-}
+
 
 img {
     height: 250px;
-    width: 300px;
+    width: 250px;
 }
