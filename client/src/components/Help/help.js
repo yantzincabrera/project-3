@@ -6,7 +6,7 @@ import {Feed} from '../Feed/feed'
 
 export const Help = props => {
     return (
-<div>
+<div className="Cover">
 
         
      <Feed/>
